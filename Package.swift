@@ -5,21 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "Lantern",
-    products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "Lantern",
-            targets: ["Lantern"]),
+    platforms: [
+        .iOS(.v9)
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+    products: [
+        .library(name: "Lantern", targets: ["Lantern"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-        .target(
-            name: "Lantern",
-            dependencies: []),
+        .target(name: "Lantern", path: "Sources", exclude: []),
     ]
 )
